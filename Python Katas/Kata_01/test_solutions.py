@@ -23,14 +23,14 @@ class TestTodoFunctions(unittest.TestCase):
         self.assertEqual(reverse_string("racecar"), "racecar", "Test palindrome string")
         self.assertEqual(reverse_string(""), "", "Test empty string")
 
-    # def test_find_largest_number(self):
-    #     """
-    #     Test the find_largest_number function with various lists of integers.
-    #     """
-    #     self.assertEqual(find_largest_number([3, 1, 7, 4, 9]), 9, "Test normal list")
-    #     self.assertEqual(find_largest_number([5, 5, 5, 5]), 5, "Test all same numbers")
-    #     self.assertEqual(find_largest_number([-10, -3, -1, -7]), -1, "Test negative numbers")
-    #     self.assertEqual(find_largest_number([0]), 0, "Test single element list")
+    def test_find_largest_number(self):
+        """
+        Test the find_largest_number function with various lists of integers.
+        """
+        self.assertEqual(find_largest_number([3, 1, 7, 4, 9]), 9, "Test normal list")
+        self.assertEqual(find_largest_number([5, 5, 5, 5]), 5, "Test all same numbers")
+        self.assertEqual(find_largest_number([-10, -3, -1, -7]), -1, "Test negative numbers")
+        self.assertEqual(find_largest_number([0]), 0, "Test single element list")
 
     def test_count_vowels(self):
         """
