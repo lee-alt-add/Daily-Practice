@@ -42,14 +42,14 @@ class TestTodoFunctions(unittest.TestCase):
         self.assertEqual(count_vowels("HELLO"), 2, "Test uppercase vowels")
         self.assertEqual(count_vowels(""), 0, "Test empty string")
 
-    # def test_fibonacci_sequence(self):
-    #     """
-    #     Test the fibonacci_sequence function with various inputs.
-    #     """
-    #     self.assertEqual(fibonacci_sequence(5), [0, 1, 1, 2, 3], "Test small n")
-    #     self.assertEqual(fibonacci_sequence(10), [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], "Test larger n")
-    #     self.assertEqual(fibonacci_sequence(1), [0], "Test single element")
-    #     self.assertEqual(fibonacci_sequence(0), [], "Test zero input")
+    def test_fibonacci_sequence(self):
+        """
+        Test the fibonacci_sequence function with various inputs.
+        """
+        self.assertEqual(fibonacci_sequence(5), [0, 1, 1, 2, 3], "Test small n")
+        self.assertEqual(fibonacci_sequence(10), [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], "Test larger n")
+        self.assertEqual(fibonacci_sequence(1), [0], "Test single element")
+        self.assertEqual(fibonacci_sequence(0), [], "Test zero input")
 
 
 if __name__ == "__main__":

@@ -39,4 +39,15 @@ def fibonacci_sequence(n):
     """
     Generate and return the first n numbers in the Fibonacci sequence.
     """
-    pass
+    fib = [0,1]
+    
+    # Handle an input of 1 or 0
+    if n == 0:
+        return []
+    if n == 1:
+        return [0]
+    
+    for _ in range(3,n+1):
+        fib.append(fib[-1]+fib[-2])
+        
+    return fib
