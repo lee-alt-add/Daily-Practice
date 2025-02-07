@@ -52,11 +52,9 @@ Daily Practice/
 │
 ├── Python Katas/
 │   ├── Kata_01/
-│   │   ├── problem.md       # Problem description
 │   │   ├── solution.py      # Solution code (hidden initially)
 │   │   └── test.py          # Optional: Test cases for the problem
 │   ├── Kata_02/
-│   │   ├── problem.md
 │   │   ├── solution.py
 │   │   └── test.py
 │   ...
