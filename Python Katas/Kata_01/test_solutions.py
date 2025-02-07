@@ -32,15 +32,15 @@ class TestTodoFunctions(unittest.TestCase):
     #     self.assertEqual(find_largest_number([-10, -3, -1, -7]), -1, "Test negative numbers")
     #     self.assertEqual(find_largest_number([0]), 0, "Test single element list")
 
-    # def test_count_vowels(self):
-    #     """
-    #     Test the count_vowels function with various strings.
-    #     """
-    #     self.assertEqual(count_vowels("hello"), 2, "Test normal string")
-    #     self.assertEqual(count_vowels("aeiou"), 5, "Test all vowels")
-    #     self.assertEqual(count_vowels("bcdfg"), 0, "Test no vowels")
-    #     self.assertEqual(count_vowels("HELLO"), 2, "Test uppercase vowels")
-    #     self.assertEqual(count_vowels(""), 0, "Test empty string")
+    def test_count_vowels(self):
+        """
+        Test the count_vowels function with various strings.
+        """
+        self.assertEqual(count_vowels("hello"), 2, "Test normal string")
+        self.assertEqual(count_vowels("aeiou"), 5, "Test all vowels")
+        self.assertEqual(count_vowels("bcdfg"), 0, "Test no vowels")
+        self.assertEqual(count_vowels("HELLO"), 2, "Test uppercase vowels")
+        self.assertEqual(count_vowels(""), 0, "Test empty string")
 
     # def test_fibonacci_sequence(self):
     #     """

@@ -25,7 +25,14 @@ def count_vowels(s):
     """
     Count and return the number of vowels in a given string.
     """
-    pass
+    alphabets = "aeiou"
+    count = 0
+    
+    for letter in s:
+        if letter.lower() in alphabets:
+            count += 1
+            
+    return count
 
 
 def fibonacci_sequence(n):
