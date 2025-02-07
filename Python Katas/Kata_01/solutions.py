@@ -11,7 +11,7 @@ def reverse_string(s):
     """
     Reverse a given string and return the reversed version.
     """
-    pass
+    return s[::-1]
 
 
 def find_largest_number(numbers):
