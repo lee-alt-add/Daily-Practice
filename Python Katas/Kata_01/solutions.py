@@ -4,7 +4,7 @@ def add_two_numbers(a, b):
     """
     Add two numbers and return their sum.
     """
-    pass
+    return a + b
 
 
 def reverse_string(s):
