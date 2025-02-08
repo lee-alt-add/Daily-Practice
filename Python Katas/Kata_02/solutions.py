@@ -4,7 +4,8 @@ def calculate_average(numbers):
     """
     Calculate and return the average of a list of numbers.
     """
-    pass
+
+    return sum(numbers)/len(numbers)
 
 
 def is_palindrome(s):
