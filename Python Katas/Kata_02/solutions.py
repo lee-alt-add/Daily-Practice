@@ -12,7 +12,8 @@ def is_palindrome(s):
     """
     Check if a given string is a palindrome (ignoring spaces and case).
     """
-    pass
+    s = "".join(s.split())
+    return s.lower() == s[::-1].lower()
 
 
 def flatten_list(nested_list):
