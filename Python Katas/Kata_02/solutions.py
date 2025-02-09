@@ -42,11 +42,10 @@ def word_count(text):
     
     return {k:text_as_list.count(k) for k in text_as_list}
 
-print(word_count(""))
-
 
 def find_common_elements(list1, list2):
     """
     Find and return the common elements between two lists.
     """
-    pass
+
+    return set([item1 for item1 in list1 for item2 in list2 if item1 == item2])
