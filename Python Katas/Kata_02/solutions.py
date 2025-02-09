@@ -20,7 +20,21 @@ def flatten_list(nested_list):
     """
     Flatten a nested list into a single list.
     """
-    pass
+    flattened = []
+    
+    def recursive_flatten(item):
+        if isinstance(item, list):
+            for subitem in item:
+                recursive_flatten(subitem)
+        else:
+            flattened.append(item)
+    
+    recursive_flatten(nested_list)
+    return flattened
+
+print(flatten_list([[1, [2, 3]], [4, [5, 6]]]))
+            
+            
 
 
 def word_count(text):
