@@ -31,17 +31,18 @@ def flatten_list(nested_list):
     
     recursive_flatten(nested_list)
     return flattened
-
-print(flatten_list([[1, [2, 3]], [4, [5, 6]]]))
-            
-            
+                      
 
 
 def word_count(text):
     """
     Count the occurrences of each word in a given text and return a dictionary.
     """
-    pass
+    text_as_list = text.split()
+    
+    return {k:text_as_list.count(k) for k in text_as_list}
+
+print(word_count(""))
 
 
 def find_common_elements(list1, list2):
