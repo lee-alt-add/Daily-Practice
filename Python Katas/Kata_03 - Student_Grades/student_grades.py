@@ -9,21 +9,17 @@ def add_student(students: dict,  name: str, student_id: str, grade: list[int, in
         if not isinstance(item, int) or item < 0:
             raise ValueError("List items should be positive int type")
     
-    students[student_id] = {"name": name}
-    students[student_id][name] = grade
-
+    students[student_id] = {"name": name, "grade": grade}
 
 
 def calculate_average(students: dict, student_id: str) -> float:
     """Computes the average grade of a student"""
     
-    name = students[student_id]['name']
-    grades = students[student_id][name]
-    return sum(grades)/ len(grades)
+    return sum(students[student_id]["grade"])/ len(students[student_id]["grade"])
     
 
 def has_passed(students: dict, student_id: str)-> bool:
     """Checks is a student passed based on their average grade"""
     
-    
+    return True if calculate_average(students, student_id) > 40 else False
 
