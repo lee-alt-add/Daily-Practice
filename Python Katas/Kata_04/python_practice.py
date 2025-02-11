@@ -88,6 +88,19 @@ def month_days(month):
         month (str): month
     """
 
+    import calendar
+    
+    months = "Jan Feb March April May Jun July Aug Sept Oct Nov Dec".split()
+    months_in_nums = [1,2,3,4,5,6,7,8,9,10,11,12]
+    
+    month_dict = {word: num for word, num in zip(months, months_in_nums)}
+    
+    for item in months:
+        if item in month.capitalize():
+            if item == "Feb":
+                return 28
+            return calendar.monthrange(2016, month_dict[item])[1]
+
 
 def remove_duplicates(list):
     """Create a program to remove duplicates from a list of integers, preserving order.

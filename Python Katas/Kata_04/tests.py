@@ -37,7 +37,7 @@ class TestCase(unittest.TestCase):
         
 
     def test_month_days(self):
-        self.assertIsInstance(month_days("January"), str,"Expected a string")
+        self.assertIsInstance(month_days("January"), int,"Expected a string")
         self.assertEqual(month_days("mARch"), 31, "Unexpected output")
         self.assertEqual(month_days("feb"), 28, "Unexpected output")
         self.assertEqual(month_days("jun"), 30, "Unexpected output")
