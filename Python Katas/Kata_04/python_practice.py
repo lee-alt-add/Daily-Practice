@@ -47,7 +47,9 @@ def find_exponent(a, n):
         a (int): The base int
         n (_type_): The solution
     """
-   
+    for x in range(n+1):
+        if a**x == n:
+            return x
 
 def reverse_cases(word_list):
     """Create a program to reverse the case of all strings. For those strings, which contain no letters, reverse the strings.
