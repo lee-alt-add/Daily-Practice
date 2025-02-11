@@ -60,7 +60,7 @@ def display_person_info(person):
     Returns:
         None
     """
-    pass
+    print(f"name: {person['name']}\nsurname: {person['surname']}\nage: {person['age']}")
 
 def get_keys(person):
     """
