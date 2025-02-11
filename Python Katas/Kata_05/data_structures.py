@@ -10,7 +10,7 @@ def create_person(name, surname, age):
     Returns:
         dict: A dictionary with keys 'name', 'surname', and 'age'.
     """
-    pass
+    return {"name": name, "surname": surname, "age": age}
 
 def update_age(person, new_age):
     """
@@ -23,7 +23,7 @@ def update_age(person, new_age):
     Returns:
         None
     """
-    pass
+    person["age"] = new_age
 
 def add_phone_number(person, phone_number):
     """
