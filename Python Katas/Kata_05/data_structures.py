@@ -202,7 +202,7 @@ def find_max_2d_list(lst):
     Returns:
         int: The maximum number found in the 2D list.
     """
-    return max([y for x in lst for y in x])
+    return max([num for inner_lst in lst for num in inner_lst])
 
 def unique_values_from_2d_list(lst):
     """
@@ -214,4 +214,4 @@ def unique_values_from_2d_list(lst):
     Returns:
         list: A list of unique values from the 2D list.
     """
-    return list(set([y for x in lst for y in x]))
+    return list(set([num for inner_lst in lst for num in inner_lst]))
