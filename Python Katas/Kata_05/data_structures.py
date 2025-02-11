@@ -138,7 +138,13 @@ def process_data(data):
     Returns:
         dict: A dictionary where each key is a name and the value is a set of ages.
     """
-    pass
+    
+    output = {k: set() for k,v in data}
+    
+    for k,v in data:
+        output[k].add(v)
+    
+    return output
 
 def get_element_at_index(lst, index):
     """
