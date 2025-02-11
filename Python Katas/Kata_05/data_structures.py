@@ -202,7 +202,7 @@ def find_max_2d_list(lst):
     Returns:
         int: The maximum number found in the 2D list.
     """
-    pass
+    return max([y for x in lst for y in x])
 
 def unique_values_from_2d_list(lst):
     """
