@@ -36,7 +36,7 @@ def add_phone_number(person, phone_number):
     Returns:
         None
     """
-    pass
+    person["phone_number"] = phone_number
 
 def remove_age(person):
     """
