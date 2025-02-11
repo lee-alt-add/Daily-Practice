@@ -190,7 +190,7 @@ def sum_2d_list(lst):
     Returns:
         int: The sum of all numbers in the 2D list.
     """
-    pass
+    return sum([sum(item) for item in lst])
 
 def find_max_2d_list(lst):
     """
