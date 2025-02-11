@@ -57,6 +57,24 @@ def reverse_cases(word_list):
     Args:
         word_list (list): List to be reversed
     """
+    import string
+    result = []
+    
+    for word in word_list:
+        if word:
+            if word[0] in string.digits + string.punctuation:
+                result.append(word[::-1])
+                continue
+            
+        new_word = ""
+        for letter in word:
+            if letter in string.ascii_lowercase:
+                new_word += letter.upper()
+            else:
+                new_word += letter.lower()
+        result.append(new_word) 
+        
+    return result
 
 
 def month_days(month):
