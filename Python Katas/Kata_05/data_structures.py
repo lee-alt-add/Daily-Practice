@@ -48,7 +48,7 @@ def remove_age(person):
     Returns:
         None
     """
-    pass
+    del person["age"]
 
 def display_person_info(person):
     """
