@@ -72,7 +72,7 @@ def get_keys(person):
     Returns:
         list: A list of keys in the person's dictionary.
     """
-    pass
+    return list(person.keys())
 
 def get_values(person):
     """
@@ -84,7 +84,7 @@ def get_values(person):
     Returns:
         list: A list of values in the person's dictionary.
     """
-    pass
+    return list(person.values())
 
 def create_coordinates(x, y):
     """
@@ -97,7 +97,7 @@ def create_coordinates(x, y):
     Returns:
         tuple: A tuple containing the x and y coordinates.
     """
-    pass
+    return x, y
 
 def append_to_list(lst, element):
     """
@@ -110,7 +110,8 @@ def append_to_list(lst, element):
     Returns:
         list: The updated list with the new element added.
     """
-    pass
+    lst.append(element)
+    return lst
 
 def add_to_set(s, element):
     """
@@ -123,7 +124,8 @@ def add_to_set(s, element):
     Returns:
         set: The updated set with the new element added.
     """
-    pass
+    s.add(element)
+    return s
 
 def process_data(data):
     """
