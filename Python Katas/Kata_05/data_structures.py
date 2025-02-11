@@ -160,7 +160,12 @@ def get_element_at_index(lst, index):
     Raises:
         IndexError: If the index is out of range.
     """
-    pass
+    if index > len(lst) - 1:
+        raise IndexError("index out of range")
+    
+    for idx, item in enumerate(lst):
+        if idx == index:
+            return lst[idx]
 
 def double_values(lst):
     """
