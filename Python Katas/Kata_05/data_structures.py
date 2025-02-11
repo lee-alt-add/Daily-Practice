@@ -177,7 +177,8 @@ def double_values(lst):
     Returns:
         list: A new list with each value doubled.
     """
-    pass
+    
+    return [num * 2 for num in lst]
 
 def sum_2d_list(lst):
     """
