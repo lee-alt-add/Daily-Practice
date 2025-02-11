@@ -214,4 +214,4 @@ def unique_values_from_2d_list(lst):
     Returns:
         list: A list of unique values from the 2D list.
     """
-    pass
+    return list(set([y for x in lst for y in x]))
