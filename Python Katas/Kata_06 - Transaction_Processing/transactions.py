@@ -70,10 +70,15 @@ def get_highest_spending_customer(transactions: dict) -> str:
 
 def get_lowest_spending_customer(transactions: dict) -> str:
     """Returns the customer who has spent the least in total"""
+    
+    return sorted([(transactions[trans_id]["customer"], transactions[trans_id]["amount"])
+                   for trans_id in transactions.keys()], key= lambda n: n[1])[0][0]
 
 
 def get_average_spending(transactions: dict, customer: str) -> float:
     """Returns the average amount spent per transaction for a specific customer"""
+    
+    all_spendings = [transactions[trans_id]["amount"] for trans_id in transactions.keys() if transactions[trans_id]["customer"] == customer]
 
 
 def get_transaction_count(transactions: dict, customer: str) -> int:
