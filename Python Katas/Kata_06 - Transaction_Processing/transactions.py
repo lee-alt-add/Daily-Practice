@@ -4,6 +4,8 @@ def add_transaction(transactions: dict, customer: str, transaction_id: str, amou
     
     if transaction_id in transactions.keys():
         raise ValueError("Customer id already in use")
+    if amount <= 0:
+        raise ValueError("Invalid amount")
     
     transactions[transaction_id] = {"customer": customer, "amount": amount}
 
@@ -16,9 +18,4 @@ def get_total_spent(transactions: dict, customer: str) -> int:
             total += values['amount']
     
     return total
-# c_dict = {}
-
-# add_transaction(c_dict,"Alice", "T003", 50)
-# add_transaction(c_dict,"Alice", "T004", 70)
-# print(get_total_spent(c_dict, 'Alice'))
             
