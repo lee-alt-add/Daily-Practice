@@ -21,6 +21,13 @@ def get_total_spent(transactions: dict, customer: str) -> int:
 
 def remove_transaction(transactions: dict, customer: str, transaction_id: str) -> bool:
     """Removes a transaction for a specific customer"""
+    
+    del transactions[transaction_id]
+    try:
+        transactions[transaction_id]
+    except KeyError:
+        return True
+    return False
 
 
 def update_transaction_amount(transactions: dict, customer: str, transaction_id: str, new_amount: int) -> bool:
