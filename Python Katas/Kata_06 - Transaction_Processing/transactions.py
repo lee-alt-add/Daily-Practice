@@ -22,16 +22,31 @@ def get_total_spent(transactions: dict, customer: str) -> int:
 def remove_transaction(transactions: dict, customer: str, transaction_id: str) -> bool:
     """Removes a transaction for a specific customer"""
     
-    del transactions[transaction_id]
+    # Checking if the transactions exists
+    if transaction_id not in transactions.keys():
+        return False
+    
+    # Remove the transaction
     try:
-        transactions[transaction_id]
-    except KeyError:
+        del transactions[transaction_id]
         return True
-    return False
+    except:
+        return False
 
 
 def update_transaction_amount(transactions: dict, customer: str, transaction_id: str, new_amount: int) -> bool:
     """Updates the amount of a specific transaction for a customer"""
+    
+    # Checking if the transactions exists
+    if transaction_id not in transactions.keys():
+        return False
+    
+    # Updating the transaction amount
+    try:
+        transactions[transaction_id] = {"customer": customer, "amount": new_amount}
+        return True
+    except:
+        return False
 
 
 def get_customer_transactions(transactions: dict, customer: str) -> list:
