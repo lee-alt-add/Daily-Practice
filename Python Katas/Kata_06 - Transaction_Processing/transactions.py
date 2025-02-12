@@ -85,6 +85,10 @@ def get_average_spending(transactions: dict, customer: str) -> float:
 
 def get_transaction_count(transactions: dict, customer: str) -> int:
     """Returns the total number of transactions for a specific customer"""
+    
+    customer_spending = [transactions[trans_id]["amount"] for trans_id in transactions.keys() if transactions[trans_id]["customer"] == customer]
+    
+    return len(customer_spending)
 
 
 def get_transactions_in_range(transactions: dict, customer: str, min_amount: int, max_amount: int) -> list:
