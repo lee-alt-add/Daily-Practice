@@ -51,11 +51,14 @@ def update_transaction_amount(transactions: dict, customer: str, transaction_id:
 
 def get_customer_transactions(transactions: dict, customer: str) -> list:
     """Returns a list of all transactions for a specific customer"""
+    
+    return [trans_id for trans_id in transactions.keys() if transactions[trans_id]["customer"] == customer]
 
 
 def get_all_customers(transactions: dict) -> list:
     """Returns a list of all unique customers in the transactions"""
-
+    
+    return list(set([transactions[trans_id]["customer"] for trans_id in transactions.keys()]))
 
 def get_highest_spending_customer(transactions: dict) -> str:
     """Returns the customer who has spent the most in total"""
