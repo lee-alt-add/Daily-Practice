@@ -102,4 +102,6 @@ def get_transactions_in_range(transactions: dict, customer: str, min_amount: int
 
 def clear_all_transactions(transactions: dict) -> None:
     """Clears all transactions from the dictionary"""
+    
+    transactions.clear()
             
