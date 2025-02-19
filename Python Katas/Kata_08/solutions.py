@@ -38,7 +38,6 @@ def group_anagrams(words):
 
     return result
 
-print(group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
 
 def is_valid_parentheses(s):
     """
@@ -51,4 +50,4 @@ def merge_sorted_lists(list1, list2):
     """
     Merge two sorted lists into one sorted list.
     """
-    pass
+    return sorted([item for item in list1+list2])
