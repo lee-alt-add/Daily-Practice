@@ -4,7 +4,13 @@ def remove_duplicates(lst):
     """
     Remove duplicates from a list while preserving the original order.
     """
-    pass
+    result = []
+    
+    for letter in lst:
+        if letter not in result:
+            result.append(letter)
+            
+    return result
 
 
 def longest_substring_without_repeating_chars(s):

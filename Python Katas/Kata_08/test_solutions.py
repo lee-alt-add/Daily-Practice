@@ -1,7 +1,7 @@
 # test_todo.py
 
 import unittest
-from todo import remove_duplicates, longest_substring_without_repeating_chars, group_anagrams, is_valid_parentheses, merge_sorted_lists
+from solutions import remove_duplicates, longest_substring_without_repeating_chars, group_anagrams, is_valid_parentheses, merge_sorted_lists
 
 class TestTodoFunctions(unittest.TestCase):
 
