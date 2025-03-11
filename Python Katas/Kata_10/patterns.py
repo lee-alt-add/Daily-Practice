@@ -1,6 +1,6 @@
 def count_items(items):
     # TODO: Return the number of items in the list
-    pass
+    return len(items)
 
 def sum_numbers(numbers):
     # TODO: Return the sum of all numbers in the list
