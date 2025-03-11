@@ -8,7 +8,7 @@ def sum_numbers(numbers):
 
 def find_largest(numbers):
     # TODO: Return the largest number in the list
-    pass
+    return max(numbers)
 
 def count_even_numbers(numbers):
     # TODO: Return the count of even numbers in the list
