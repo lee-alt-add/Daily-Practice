@@ -4,7 +4,7 @@ def count_items(items):
 
 def sum_numbers(numbers):
     # TODO: Return the sum of all numbers in the list
-    pass
+    return sum(numbers)
 
 def find_largest(numbers):
     # TODO: Return the largest number in the list
