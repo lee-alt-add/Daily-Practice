@@ -16,7 +16,7 @@ def count_even_numbers(numbers):
 
 def sum_digits(number):
     # TODO: Return the sum of digits in the given number
-    pass
+    return sum([int(num) for num in str(number)])
 
 def count_vowels(string):
     # TODO: Return the count of vowels in the string (case-insensitive)
