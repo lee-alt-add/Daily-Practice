@@ -41,7 +41,7 @@ def fibonacci_sequence(n):
 
 def remove_vowels(string):
     # TODO: Return the string with all vowels removed
-    pass
+    return "".join([letter for letter in string if letter not in "aeiouAEIOU"])
 
 def create_multiplication_table(n):
     # TODO: Return a 2D list representing multiplication table up to n
