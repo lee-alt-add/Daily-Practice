@@ -32,7 +32,7 @@ def multiply_list_elements(numbers):
 def create_number_triangle(n):
     # TODO: Return a list of strings representing a number triangle
     # Example for n=3: ['1', '22', '333']
-    pass
+    return [str(num) * num for num in range(1, n+1)]
 
 
 def fibonacci_sequence(n):
