@@ -20,7 +20,7 @@ def sum_digits(number):
 
 def count_vowels(string):
     # TODO: Return the count of vowels in the string (case-insensitive)
-    pass
+    return len([letter for letter in string if letter in "aeiouAEIOU"])
 
 def multiply_list_elements(numbers):
     # TODO: Return the product of all elements in the list
