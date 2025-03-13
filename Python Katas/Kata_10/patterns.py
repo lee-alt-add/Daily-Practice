@@ -1,3 +1,5 @@
+import math
+
 def count_items(items):
     # TODO: Return the number of items in the list
     return len(items)
@@ -24,7 +26,7 @@ def count_vowels(string):
 
 def multiply_list_elements(numbers):
     # TODO: Return the product of all elements in the list
-    pass
+    return math.prod(numbers)
     
 
 def create_number_triangle(n):
