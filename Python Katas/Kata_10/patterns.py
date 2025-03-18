@@ -50,7 +50,7 @@ def create_multiplication_table(n):
 
 def count_character_frequency(string):
     # TODO: Return a dictionary with character frequencies
-    pass
+    return {k:string.count(k) for k in string}
 
 
 def reverse_words(sentence):
