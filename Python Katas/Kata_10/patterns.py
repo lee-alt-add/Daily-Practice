@@ -14,7 +14,7 @@ def find_largest(numbers):
 
 def count_even_numbers(numbers):
     # TODO: Return the count of even numbers in the list
-    return len([num for num in numbers if num % 2 != 0])
+    return len([num for num in numbers if num % 2 == 0])
 
 def sum_digits(number):
     # TODO: Return the sum of digits in the given number
