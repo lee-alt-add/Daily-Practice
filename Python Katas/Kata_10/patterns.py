@@ -55,7 +55,7 @@ def count_character_frequency(string):
 
 def reverse_words(sentence):
     # TODO: Return the sentence with each word reversed
-    pass
+    return " ".join([word[::-1] for word in sentence.split()])
 
 def spiral_matrix(n):
     # TODO: Return a 2D list representing a spiral matrix of size n x n
