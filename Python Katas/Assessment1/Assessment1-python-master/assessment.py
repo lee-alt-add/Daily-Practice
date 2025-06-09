@@ -20,10 +20,23 @@ class StringProcessor:
         - "" (empty string) should become ""
         - "  " (only spaces) should become "  "
         """
-        pass
+        output = ""
+        word = ""
+        for alphabet in sentence:
+            if alphabet == " ":
+                if word != "":
+                    output += word[::-1]
+                    word = ""
+                output += " "
+            else:
+                word += alphabet
+        
+        return output + word[::-1]
 
 class NumberCruncher:
+    
     def process_numbers(self, numbers: list[int]) -> dict[str, int]:
+        import math
         """
         Processes a list of integers to calculate the sum of all even numbers
         and the product of all odd numbers.
@@ -45,7 +58,10 @@ class NumberCruncher:
         - [] (empty list) should return {"sum_of_evens": 0, "product_of_odds": 1}
         - [-2, -3, -4, 5] should return {"sum_of_evens": -6, "product_of_odds": -15}
         """
-        pass
+        even = [x for x in numbers if x % 2 == 0]
+        odd = [x for x in numbers if x % 2 != 0]
+        return {"sum_of_evens": sum(even) if len(even) != 0 else 0,
+                 "product_of_odds": math.prod(odd) if len(odd) != 0 else 1}
 
 class LogicValidator:
     def check_discount_eligibility(self, age: int, is_member: bool, has_coupon: bool) -> str:
@@ -67,7 +83,12 @@ class LogicValidator:
         Return the string representing the determined discount type.
         Assume age will be a non-negative integer.
         """
-        pass
+        return "Senior Discount" if age > 65 else \
+                "Student Discount" if 0 < age < 18 else\
+                "Member Coupon Discount" if 18 <= age < 65 and is_member and has_coupon else \
+                "Member Discount" if 18 <= age < 65 and is_member and not has_coupon else \
+                "Coupon Discount" if 18 <= age < 65 and not is_member and has_coupon else \
+                "No Discount"
 
 class PasswordValidatorTDD:
     # NOTE TO STUDENT: For this class, you must first write the unit tests in
@@ -75,6 +96,7 @@ class PasswordValidatorTDD:
     # implementing the method itself. This is a Test-Driven Development (TDD) exercise.
 
     def is_valid_password(self, password: str) -> bool:
+        import string
         """
         Validates a password string based on the following criteria.
         All criteria must be met for the password to be considered valid.
@@ -90,4 +112,13 @@ class PasswordValidatorTDD:
         You should implement this method *after* writing comprehensive unit tests
         for it in the test_assessment.py file.
         """
-        pass
+        valid_chars = len(password) > 7
+        has_upper = len([x for x in password if x.isupper()]) > 0
+        has_lower = len([x for x in password if x.islower()]) > 0
+        has_digit = len([x for x in password if x.isalnum()]) > 0
+        has_special_char = len([x for x in password if x in string.punctuation]) > 0
+
+        return  valid_chars and has_upper and has_lower and has_digit and has_special_char
+
+pd = PasswordValidatorTDD()
+print(pd.is_valid_password("caught_flaw"))

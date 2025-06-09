@@ -128,20 +128,19 @@ class TestPasswordValidatorTDD(unittest.TestCase):
 
     # TODO: STUDENT - Write your test methods here. Examples:
     #
-    # def test_valid_password_meets_all_criteria(self):
-    #     """Test a password that meets all criteria."""
-    #     # self.assertTrue(self.validator.is_valid_password("ValidPass1!"))
-    #     pass
+    def test_valid_password_meets_all_criteria(self):
+        """Test a password that meets all criteria."""
+        self.assertTrue(self.validator.is_valid_password("ValidPass1!"))
     #
-    # def test_invalid_too_short(self):
-    #     """Test password shorter than 8 characters."""
-    #     # self.assertFalse(self.validator.is_valid_password("Sh0rt!"))
-    #     pass
+    def test_invalid_too_short(self):
+        """Test password shorter than 8 characters."""
+        self.assertFalse(self.validator.is_valid_password("Sh0rt!"))
+        pass
     #
-    # def test_valid_minimum_length(self):
-    #     """Test password at the minimum length (8 characters) meeting all other criteria."""
-    #     # self.assertTrue(self.validator.is_valid_password("MinLenA1@"))
-    #     pass
+    def test_valid_minimum_length(self):
+        """Test password at the minimum length (8 characters) meeting all other criteria."""
+        self.assertTrue(self.validator.is_valid_password("MinLenA1@"))
+        pass
     # Add at least 5-7 more diverse test cases covering all rules and edge cases.
     # Ensure your tests in this class collectively cover all conditions described in
     # the PasswordValidatorTDD.is_valid_password docstring.
