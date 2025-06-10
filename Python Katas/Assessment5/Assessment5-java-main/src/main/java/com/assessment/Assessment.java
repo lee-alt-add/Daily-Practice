@@ -89,17 +89,9 @@ public class Assessment {
      */
     public static List<Map<String, String>> formatNamesList(List<String> namesList) {
         // TODO: Implement this method
-        List<Map<String, String>> output = new ArrayList<>();
-        
-        for (String name: namesList) {
-            String[] na = name.split(" ");
-            output.add(Map.of("firstName", na[0], "lastName", na[1]));
-        }
-        
-        
         return namesList.stream()
-                .map(i -> i.split(" ").length > 1 ? Map.of("firstName", i.split(" ")[0], "lastName", i.split(" ")[1]) :
-                        Map.of("firstName", i.split(" ")[0], "lastName", ""))
+                .map(i -> i.contains(" ") ? Map.of("firstName", i.split(" ")[0], "lastName", i.split(" ")[1]) :
+                        Map.of("firstName", i, "lastName", ""))
                 .collect(Collectors.toList());
     }
 
