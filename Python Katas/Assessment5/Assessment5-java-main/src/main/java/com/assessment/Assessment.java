@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Collections;
+import java.util.stream.Collectors;
 
 public class Assessment {
 
@@ -20,7 +21,17 @@ public class Assessment {
      */
     public static List<Integer> generateFibonacciSequence(int n) {
         // TODO: Implement this method
-        return Collections.emptyList();
+        
+        if (n <= 0) return List.of();
+        if (n == 1) return List.of(0);
+        
+        List<Integer> numbers = new ArrayList<>(List.of(0,1));
+        
+        for (int i = 2; i < n; i++) {
+            numbers.add(numbers.get(i-1) + numbers.get(i - 2));
+        }
+        
+        return numbers;
 
     }
 
@@ -36,7 +47,9 @@ public class Assessment {
      */
     public static boolean isPalindromeAdvanced(String text) {
         // TODO: Implement this method
-        return false;
+        String cleanText = text.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        StringBuilder sb = new StringBuilder(cleanText);
+        return cleanText.equals(sb.reverse().toString());
     }
 
     /**
@@ -52,7 +65,10 @@ public class Assessment {
      */
     public static List<Integer> findElementsInMatrixGreaterThanValue(List<List<Integer>> matrix, int value) {
         // TODO: Implement this method
-        return Collections.emptyList();
+        return matrix.stream()
+                .flatMap(list -> list.stream())
+                .filter(num -> num > value)
+                .collect(Collectors.toList());
     }
 
     /**
@@ -62,7 +78,7 @@ public class Assessment {
      * <p>
      * Example: ["Ada Lovelace", "Charles Babbage"] ->
      *          [{"firstName": "Ada", "lastName": "Lovelace"},
-     *           {"firstName": "Charles", "lastName": "Babbage"}]
+     *           {"firstName": "Charles", "C": "Babbage"}]
      *
      * @param namesList A List of full names.
      * @return A List of Maps, each representing a parsed name.
@@ -73,7 +89,18 @@ public class Assessment {
      */
     public static List<Map<String, String>> formatNamesList(List<String> namesList) {
         // TODO: Implement this method
-        return Collections.emptyList();
+        List<Map<String, String>> output = new ArrayList<>();
+        
+        for (String name: namesList) {
+            String[] na = name.split(" ");
+            output.add(Map.of("firstName", na[0], "lastName", na[1]));
+        }
+        
+        
+        return namesList.stream()
+                .map(i -> i.split(" ").length > 1 ? Map.of("firstName", i.split(" ")[0], "lastName", i.split(" ")[1]) :
+                        Map.of("firstName", i.split(" ")[0], "lastName", ""))
+                .collect(Collectors.toList());
     }
 
     /**

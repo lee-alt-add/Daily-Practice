@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.assessment.AssessmentTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.152 s <<< FAILURE! - in com.assessment.AssessmentTest
+testFormatNamesList  Time elapsed: 0.129 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at com.assessment.AssessmentTest.testFormatNamesList(AssessmentTest.java:91)
+
