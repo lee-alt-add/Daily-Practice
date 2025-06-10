@@ -20,18 +20,10 @@ class StringProcessor:
         - "" (empty string) should become ""
         - "  " (only spaces) should become "  "
         """
-        output = ""
-        word = ""
-        for alphabet in sentence:
-            if alphabet == " ":
-                if word != "":
-                    output += word[::-1]
-                    word = ""
-                output += " "
-            else:
-                word += alphabet
+        for word in sentence.split():
+            sentence = sentence.replace(word, word[::-1])
         
-        return output + word[::-1]
+        return sentence
 
 class NumberCruncher:
     
@@ -83,8 +75,8 @@ class LogicValidator:
         Return the string representing the determined discount type.
         Assume age will be a non-negative integer.
         """
-        return "Senior Discount" if age > 65 else \
-                "Student Discount" if 0 < age < 18 else\
+        return "Senior Discount" if age >= 65 else \
+                "Student Discount" if 0 <= age < 18 else\
                 "Member Coupon Discount" if 18 <= age < 65 and is_member and has_coupon else \
                 "Member Discount" if 18 <= age < 65 and is_member and not has_coupon else \
                 "Coupon Discount" if 18 <= age < 65 and not is_member and has_coupon else \
