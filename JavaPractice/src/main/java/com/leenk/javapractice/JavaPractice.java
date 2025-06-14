@@ -56,4 +56,9 @@ public class JavaPractice {
         StringBuilder sb = new StringBuilder(str);
         return str.equals(sb.reverse().toString());
     }
+    
+    public static String reverseString(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+    }
 }
