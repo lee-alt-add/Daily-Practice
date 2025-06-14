@@ -24,6 +24,11 @@ let fizzbuzz = (n) => {
 
 let isPalindrome = (str) => { return str.toLowerCase().split("").reverse().join("") == str.toLowerCase(); }
 
+let duplicates = (lst) => {
+	let times = (container, e) => { return container.filter((a) => e == a).length == 1; }
+	return lst.filter((a) => times(lst,a));
+}
+
 console.log(swap(5,56).b);
 console.log(evenOrOdd(10));
 console.log(maxNum([1,2,453,657,200,123]));
@@ -32,3 +37,4 @@ console.log(vowels("lindokuhle"));
 console.log(reversed("lindokuhle"));
 console.log(fizzbuzz(20));
 console.log(isPalindrome("racecar"));
+console.log(duplicates([1,2,4,2,1,3]));
