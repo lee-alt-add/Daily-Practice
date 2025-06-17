@@ -42,3 +42,13 @@ function wordCount(text) {
         acc.set(curr, numOfWords(text.split(" "),curr)),new Map());
 }
 
+/**
+ * @param {Array} list1
+ * @param {Array} list2
+ * @returns {Array}
+ */
+function findCommonElements(list1, list2) {
+    return list1.filter((x) => list2.includes(x));
+}
+console.log(findCommonElements([1,2,334,5,6,7], [1,2,33,1,2]));
+
