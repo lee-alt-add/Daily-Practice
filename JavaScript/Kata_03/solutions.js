@@ -50,5 +50,4 @@ function wordCount(text) {
 function findCommonElements(list1, list2) {
     return list1.filter((x) => list2.includes(x));
 }
-console.log(findCommonElements([1,2,334,5,6,7], [1,2,33,1,2]));
 
