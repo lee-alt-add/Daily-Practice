@@ -18,3 +18,10 @@ function calculateAverage(students, studentId) {
     return students[studentId].reduce((a,b) => a+b, 0) / students[studentId].length;
 }
 
+/**
+ * @param {Map} students
+ * @param {String} studentId
+ */
+function hasPassed(students, studentId) {
+    return calculateAverage(students, studentId) > 40;
+}
