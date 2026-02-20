@@ -24,5 +24,13 @@ function reverse_words(string $str): string {
     return implode(" ", $array);
 }
 
+function find_largest(array $numbers): int {
+    usort($numbers, function($a, $b){
+        return $a <=> $b;
+    });
+    return $numbers[count($numbers)-1];
+}
+
+
 
 ?>
