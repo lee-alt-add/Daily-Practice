@@ -31,6 +31,16 @@ function find_largest(array $numbers): int {
     return $numbers[count($numbers)-1];
 }
 
+function count_vowels(string $words): int {
+    $count = 0;
+    $vowels = str_split("aeiouAEIOU");
 
+    foreach(str_split($words) as $letter){
+        if (in_array($letter, $vowels)) {
+            $count += 1;
+        }
+    }
+    return $count;
+}
 
 ?>
