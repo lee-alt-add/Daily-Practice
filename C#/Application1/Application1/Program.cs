@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 public class Practice
 {
@@ -48,9 +49,29 @@ public class Practice
         return output;
     }
 
+    public bool isPalindrome(string str)
+    {
+        char[] charArray = str.ToCharArray();
+        Array.Reverse(charArray);
+        return str == new string(charArray);
+    }
+
+    public double getAvarage(int[] numbers)
+    {
+        return numbers.Average();
+    }
+
+    public int countWords(string sentence)
+    {
+        return sentence.Split(' ').Length;
+    }
     static void Main()
     {
         Practice practice = new Practice();
         Console.WriteLine(practice.countVowels("lindokuhle"));
+        Console.WriteLine(practice.addNumbers(5, 10));
+        Console.WriteLine(practice.greet("Lindo"));
+        Console.WriteLine(practice.reverseString("hello"));
+        Console.WriteLine(practice.findLargest(new int[] { 1, 5, 3, 9, 2 }));
     }
 }

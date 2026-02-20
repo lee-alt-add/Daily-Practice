@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/lindo/Documents/greeting/Application1/Application1/Application1.csproj": {}
+    "/home/oem/Documents/GitHub/Daily-Practice/C#/Application1/Application1/Application1.csproj": {}
   },
   "projects": {
-    "/home/lindo/Documents/greeting/Application1/Application1/Application1.csproj": {
+    "/home/oem/Documents/GitHub/Daily-Practice/C#/Application1/Application1/Application1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lindo/Documents/greeting/Application1/Application1/Application1.csproj",
+        "projectUniqueName": "/home/oem/Documents/GitHub/Daily-Practice/C#/Application1/Application1/Application1.csproj",
         "projectName": "Application1",
-        "projectPath": "/home/lindo/Documents/greeting/Application1/Application1/Application1.csproj",
-        "packagesPath": "/home/lindo/.nuget/packages/",
-        "outputPath": "/home/lindo/Documents/greeting/Application1/Application1/obj/",
+        "projectPath": "/home/oem/Documents/GitHub/Daily-Practice/C#/Application1/Application1/Application1.csproj",
+        "packagesPath": "/home/oem/.nuget/packages/",
+        "outputPath": "/home/oem/Documents/GitHub/Daily-Practice/C#/Application1/Application1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lindo/.nuget/NuGet/NuGet.Config"
+          "/home/oem/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
