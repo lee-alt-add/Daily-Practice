@@ -43,4 +43,21 @@ function count_vowels(string $words): int {
     return $count;
 }
 
+function fibonnaci(int $number): array {
+    if ($number == 1) {
+        return [0];
+    }
+
+    elseif ($number == 2){
+        return [0,1];
+    }
+
+    $result = [0,1];
+
+    for ($i = 2; $i < $number; $i++) {
+        $result[] = $result[$i - 1] + $result[$i - 2];
+    }
+    return $result;
+}
+
 ?>
